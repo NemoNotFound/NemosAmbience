@@ -10,16 +10,12 @@ import net.minecraft.client.world.ClientWorld;
 @Environment(value=EnvType.CLIENT)
 public class OakLeavesParticle
 extends SpriteBillboardParticle {
-    private static final float field_43372 = 0.0025f;
-    private static final int field_43373 = 300;
-    private static final int field_43366 = 300;
-    private static final float field_43367 = 0.25f;
-    private static final float field_43368 = 2.0f;
+
     private float field_43369;
     private final float field_43370;
     private final float field_43371;
 
-    protected OakLeavesParticle(ClientWorld world, double x, double y, double z, SpriteProvider spriteProvider) {
+    public OakLeavesParticle(ClientWorld world, double x, double y, double z, SpriteProvider spriteProvider) {
         super(world, x, y, z);
         float f;
         this.setSprite(spriteProvider.getSprite(this.random.nextInt(12), 12));

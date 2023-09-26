@@ -16,7 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.nemonotfound.ExampleMod"
+          "com.nemonotfound.AmbienceMod"
+		],
+		"client": [
+			"com.nemonotfound.AmbienceModClient"
 		]
 	},
 	"mixins": [
