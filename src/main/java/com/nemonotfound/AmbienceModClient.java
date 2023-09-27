@@ -10,5 +10,6 @@ public class AmbienceModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ParticleFactoryRegistry.getInstance().register(AmbienceMod.OAK_LEAVES_Particle, (FabricSpriteProvider spriteProvider) -> (parameters, world, x, y, z, velocityX, velocityY, velocityZ) -> new OakLeavesParticle(world, x, y, z, spriteProvider));
+        ParticleFactoryRegistry.getInstance().register(AmbienceMod.DARK_OAK_LEAVES_Particle, (FabricSpriteProvider spriteProvider) -> (parameters, world, x, y, z, velocityX, velocityY, velocityZ) -> new OakLeavesParticle(world, x, y, z, spriteProvider));
     }
 }

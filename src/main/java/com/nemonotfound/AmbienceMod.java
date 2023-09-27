@@ -14,11 +14,13 @@ public class AmbienceMod implements ModInitializer {
     public static final String MOD_ID = "nemos-ambience";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static final DefaultParticleType OAK_LEAVES_Particle = FabricParticleTypes.simple();
+    public static final DefaultParticleType DARK_OAK_LEAVES_Particle = FabricParticleTypes.simple();
 
 
     @Override
     public void onInitialize() {
         LOGGER.info("Thanks for using Nemo's Ambience!");
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "oak_leaves"), OAK_LEAVES_Particle);
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "dark_oak_leaves"), DARK_OAK_LEAVES_Particle);
     }
 }
