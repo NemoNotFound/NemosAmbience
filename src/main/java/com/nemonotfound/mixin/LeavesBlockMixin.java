@@ -35,6 +35,9 @@ public class LeavesBlockMixin {
 			case "birch_leaves":
 				generateParticles(world, pos, random, BIRCH_LEAVES_Particle);
 				break;
+			case "spruce_leaves":
+				generateParticles(world, pos, random, SPRUCE_LEAVES_Particle);
+				break;
 		}
 	}
 
