@@ -15,8 +15,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static com.nemonotfound.AmbienceMod.DARK_OAK_LEAVES_Particle;
-import static com.nemonotfound.AmbienceMod.OAK_LEAVES_Particle;
+import static com.nemonotfound.AmbienceMod.*;
 
 
 @Mixin(LeavesBlock.class)
@@ -26,10 +25,16 @@ public class LeavesBlockMixin {
 	private void init(BlockState state, World world, BlockPos pos, Random random, CallbackInfo ci) {
 		String leavesName = Registries.BLOCK.getId(state.getBlock()).getPath();
 
-		if (leavesName.equals("oak_leaves")) {
-			generateParticles(world, pos, random, OAK_LEAVES_Particle);
-		} else if (leavesName.equals("dark_oak_leaves")) {
-			generateParticles(world, pos, random, DARK_OAK_LEAVES_Particle);
+		switch (leavesName) {
+			case "oak_leaves":
+				generateParticles(world, pos, random, OAK_LEAVES_Particle);
+				break;
+			case "dark_oak_leaves":
+				generateParticles(world, pos, random, DARK_OAK_LEAVES_Particle);
+				break;
+			case "birch_leaves":
+				generateParticles(world, pos, random, BIRCH_LEAVES_Particle);
+				break;
 		}
 	}
 

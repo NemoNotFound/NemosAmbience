@@ -8,14 +8,14 @@ import net.minecraft.client.particle.SpriteProvider;
 import net.minecraft.client.world.ClientWorld;
 
 @Environment(value=EnvType.CLIENT)
-public class OakLeavesParticle
+public class LeavesParticle
 extends SpriteBillboardParticle {
 
     private float field_43369;
     private final float field_43370;
     private final float field_43371;
 
-    public OakLeavesParticle(ClientWorld world, double x, double y, double z, SpriteProvider spriteProvider) {
+    public LeavesParticle(ClientWorld world, double x, double y, double z, SpriteProvider spriteProvider) {
         super(world, x, y, z);
         float f;
         this.setSprite(spriteProvider.getSprite(this.random.nextInt(12), 12));
@@ -51,7 +51,7 @@ extends SpriteBillboardParticle {
         double e = Math.sin(Math.toRadians(this.field_43370 * 60.0f)) * 2.0 * Math.pow(g, 1.25);
         this.velocityX += d * (double)0.0025f;
         this.velocityZ += e * (double)0.0025f;
-        this.velocityY -= (double)this.gravityStrength;
+        this.velocityY -= this.gravityStrength;
         this.field_43369 += this.field_43371 / 20.0f;
         this.prevAngle = this.angle;
         this.angle += this.field_43369 / 20.0f;
@@ -62,9 +62,9 @@ extends SpriteBillboardParticle {
         if (this.dead) {
             return;
         }
-        this.velocityX *= (double)this.velocityMultiplier;
-        this.velocityY *= (double)this.velocityMultiplier;
-        this.velocityZ *= (double)this.velocityMultiplier;
+        this.velocityX *= this.velocityMultiplier;
+        this.velocityY *= this.velocityMultiplier;
+        this.velocityZ *= this.velocityMultiplier;
     }
 }
 

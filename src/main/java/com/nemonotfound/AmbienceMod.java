@@ -15,6 +15,7 @@ public class AmbienceMod implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static final DefaultParticleType OAK_LEAVES_Particle = FabricParticleTypes.simple();
     public static final DefaultParticleType DARK_OAK_LEAVES_Particle = FabricParticleTypes.simple();
+    public static final DefaultParticleType BIRCH_LEAVES_Particle = FabricParticleTypes.simple();
 
 
     @Override
@@ -22,5 +23,6 @@ public class AmbienceMod implements ModInitializer {
         LOGGER.info("Thanks for using Nemo's Ambience!");
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "oak_leaves"), OAK_LEAVES_Particle);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "dark_oak_leaves"), DARK_OAK_LEAVES_Particle);
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "birch_leaves"), BIRCH_LEAVES_Particle);
     }
 }
