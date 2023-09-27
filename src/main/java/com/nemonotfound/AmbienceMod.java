@@ -19,6 +19,7 @@ public class AmbienceMod implements ModInitializer {
     public static final DefaultParticleType SPRUCE_LEAVES_Particle = FabricParticleTypes.simple();
     public static final DefaultParticleType JUNGLE_LEAVES_Particle = FabricParticleTypes.simple();
     public static final DefaultParticleType MANGROVE_LEAVES_Particle = FabricParticleTypes.simple();
+    public static final DefaultParticleType ACACIA_LEAVES_Particle = FabricParticleTypes.simple();
 
 
     @Override
@@ -30,5 +31,6 @@ public class AmbienceMod implements ModInitializer {
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "spruce_leaves"), SPRUCE_LEAVES_Particle);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "jungle_leaves"), JUNGLE_LEAVES_Particle);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "mangrove_leaves"), MANGROVE_LEAVES_Particle);
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "acacia_leaves"), ACACIA_LEAVES_Particle);
     }
 }

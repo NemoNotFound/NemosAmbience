@@ -3,16 +3,15 @@
 	"id": "nemos-ambience",
 	"version": "${version}",
 	"name": "Nemos Ambience",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Nemo's Ambience aims to make Minecraft feel more alive!",
 	"authors": [
-		"Me!"
+		"NemoNotFound"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/nemos-ambience/icon.png",
+	"license": "MIT",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

@@ -17,5 +17,6 @@ public class AmbienceModClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(SPRUCE_LEAVES_Particle, (FabricSpriteProvider spriteProvider) -> (parameters, world, x, y, z, velocityX, velocityY, velocityZ) -> new LeavesParticle(world, x, y, z, spriteProvider));
         ParticleFactoryRegistry.getInstance().register(JUNGLE_LEAVES_Particle, (FabricSpriteProvider spriteProvider) -> (parameters, world, x, y, z, velocityX, velocityY, velocityZ) -> new LeavesParticle(world, x, y, z, spriteProvider));
         ParticleFactoryRegistry.getInstance().register(MANGROVE_LEAVES_Particle, (FabricSpriteProvider spriteProvider) -> (parameters, world, x, y, z, velocityX, velocityY, velocityZ) -> new LeavesParticle(world, x, y, z, spriteProvider));
+        ParticleFactoryRegistry.getInstance().register(ACACIA_LEAVES_Particle, (FabricSpriteProvider spriteProvider) -> (parameters, world, x, y, z, velocityX, velocityY, velocityZ) -> new LeavesParticle(world, x, y, z, spriteProvider));
     }
 }
