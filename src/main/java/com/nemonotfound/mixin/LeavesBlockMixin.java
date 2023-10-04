@@ -38,14 +38,13 @@ public class LeavesBlockMixin {
 
 	@Unique
 	private void generateParticles(World world, BlockPos pos, Random random, DefaultParticleType particleType) {
-		if (random.nextInt(20) != 0) {
-			return;
+		if (random.nextInt(20) == 0) {
+			BlockPos blockPos = pos.down();
+			BlockState blockState = world.getBlockState(blockPos);
+			if (LeavesBlock.isFaceFullSquare(blockState.getCollisionShape(world, blockPos), Direction.UP)) {
+				return;
+			}
+			ParticleUtil.spawnParticle(world, pos, random, particleType);
 		}
-		BlockPos blockPos = pos.down();
-		BlockState blockState = world.getBlockState(blockPos);
-		if (LeavesBlock.isFaceFullSquare(blockState.getCollisionShape(world, blockPos), Direction.UP)) {
-			return;
-		}
-		ParticleUtil.spawnParticle(world, pos, random, particleType);
 	}
 }
