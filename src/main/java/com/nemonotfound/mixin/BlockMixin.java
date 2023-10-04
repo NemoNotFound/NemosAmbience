@@ -10,29 +10,33 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static com.nemonotfound.AmbienceMod.LEAVES;
-
 
 @Mixin(Block.class)
 public class BlockMixin {
 
-	@Inject(at = @At("HEAD"), method = "getSoundGroup", cancellable = true)
-	private void init(BlockState state, CallbackInfoReturnable<BlockSoundGroup> cir) {
-		String blockName = Registries.BLOCK.getId(state.getBlock()).getPath();
+    @Inject(at = @At("HEAD"), method = "getSoundGroup", cancellable = true)
+    private void init(BlockState state, CallbackInfoReturnable<BlockSoundGroup> cir) {
+        String blockName = Registries.BLOCK.getId(state.getBlock()).getPath();
 
-        switch (blockName) {
-            case "oak_leaves" -> setSoundGroupReturnValue(cir);
-            case "dark_oak_leaves" -> setSoundGroupReturnValue(cir);
-            case "birch_leaves" -> setSoundGroupReturnValue(cir);
-            case "spruce_leaves" -> setSoundGroupReturnValue(cir);
-            case "jungle_leaves" -> setSoundGroupReturnValue(cir);
-            case "mangrove_leaves" -> setSoundGroupReturnValue(cir);
-            case "acacia_leaves" -> setSoundGroupReturnValue(cir);
+        if (isLeafBlock(blockName)) {
+            setSoundGroupReturnValue(cir);
         }
-	}
+    }
 
-	@Unique
-	private void setSoundGroupReturnValue(CallbackInfoReturnable<BlockSoundGroup> cir) {
-		cir.setReturnValue(LEAVES);
-	}
+    @Unique
+    private boolean isLeafBlock(String blockName) {
+        return blockName.equals("oak_leaves") ||
+                blockName.equals("dark_oak_leaves") ||
+                blockName.equals("birch_leaves") ||
+                blockName.equals("spruce_leaves") ||
+                blockName.equals("jungle_leaves") ||
+                blockName.equals("mangrove_leaves") ||
+                blockName.equals("acacia_leaves");
+
+    }
+
+    @Unique
+    private void setSoundGroupReturnValue(CallbackInfoReturnable<BlockSoundGroup> cir) {
+        cir.setReturnValue(BlockSoundGroup.AZALEA_LEAVES);
+    }
 }
