@@ -1,4 +1,4 @@
-package com.nemonotfound;
+package com.nemonotfound.nemosambience;
 
 import com.nemonotfound.nemosambience.client.particle.ModParticles;
 import net.fabricmc.api.ModInitializer;

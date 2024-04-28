@@ -6,8 +6,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static com.nemonotfound.NemosAmbience.MOD_ID;
-import static com.nemonotfound.NemosAmbience.log;
+import static com.nemonotfound.nemosambience.NemosAmbience.MOD_ID;
+import static com.nemonotfound.nemosambience.NemosAmbience.log;
 
 public class ModParticles {
 

@@ -17,10 +17,10 @@
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"com.nemonotfound.NemosAmbience"
+			"com.nemonotfound.nemosambience.NemosAmbience"
 		],
 		"client": [
-			"com.nemonotfound.NemosAmbienceClient"
+			"com.nemonotfound.nemosambience.NemosAmbienceClient"
 		]
 	},
 	"mixins": [
