@@ -3,7 +3,7 @@ package com.nemonotfound.nemosambience.mixin;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.client.util.ParticleUtil;
-import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
@@ -30,8 +30,6 @@ public class LeavesBlockMixin {
 		if (isLeavesBlock) {
 			generateLeafParticles(world, pos, random, leavesName);
 		}
-
-
 	}
 
 	@Unique
@@ -48,7 +46,7 @@ public class LeavesBlockMixin {
 	}
 
 	@Unique
-	private void generateParticles(World world, BlockPos pos, Random random, DefaultParticleType particleType) {
+	private void generateParticles(World world, BlockPos pos, Random random, SimpleParticleType particleType) {
 		if (random.nextInt(20) == 0) {
 			BlockPos blockPos = pos.down();
 			BlockState blockState = world.getBlockState(blockPos);

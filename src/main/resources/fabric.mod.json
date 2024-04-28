@@ -17,10 +17,10 @@
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"com.nemonotfound.NemosAmbience"
+			"com.nemonotfound.nemosambience.NemosAmbience"
 		],
 		"client": [
-			"com.nemonotfound.NemosAmbienceClient"
+			"com.nemonotfound.nemosambience.NemosAmbienceClient"
 		]
 	},
 	"mixins": [
@@ -28,7 +28,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.15.10",
-		"minecraft": "~1.20.4",
+		"minecraft": "~1.20.5",
 		"java": ">=17",
 		"fabric-api": "*"
 	},

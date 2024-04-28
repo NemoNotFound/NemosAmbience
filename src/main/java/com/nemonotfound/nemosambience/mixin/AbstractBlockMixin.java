@@ -1,6 +1,6 @@
 package com.nemonotfound.nemosambience.mixin;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.tag.BlockTags;
@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 
-@Mixin(Block.class)
-public class BlockMixin {
+@Mixin(AbstractBlock.class)
+public class AbstractBlockMixin {
 
     @Inject(at = @At("HEAD"), method = "getSoundGroup", cancellable = true)
     private void init(BlockState state, CallbackInfoReturnable<BlockSoundGroup> cir) {

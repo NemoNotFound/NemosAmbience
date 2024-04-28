@@ -1,10 +1,10 @@
-package com.nemonotfound;
+package com.nemonotfound.nemosambience;
 
 import com.nemonotfound.nemosambience.client.particle.LeavesParticle;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.particle.v1.FabricSpriteProvider;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.SimpleParticleType;
 
 import static com.nemonotfound.nemosambience.client.particle.ModParticles.*;
 
@@ -21,7 +21,7 @@ public class NemosAmbienceClient implements ClientModInitializer {
         registerParticle(ACACIA_LEAVES_Particle);
     }
 
-    private void registerParticle(DefaultParticleType particleType) {
+    private void registerParticle(SimpleParticleType particleType) {
         ParticleFactoryRegistry.getInstance()
                 .register(particleType, (FabricSpriteProvider spriteProvider) ->
                         (parameters, world, x, y, z, velocityX, velocityY, velocityZ) ->
