@@ -1,4 +1,4 @@
-package com.nemonotfound.client.particle;
+package com.nemonotfound.nemosambience.client.particle;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

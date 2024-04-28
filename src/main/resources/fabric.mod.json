@@ -8,24 +8,26 @@
 		"NemoNotFound"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://nemonotfound.com",
+		"sources": "https://github.com/NemoNotFound/NemosAmbience",
+		"issues": "https://github.com/NemoNotFound/NemosAmbience/issues"
 	},
 	"license": "MIT",
+	"icon": "assets/nemos-ambience/icon.png",
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-          "com.nemonotfound.AmbienceMod"
+			"com.nemonotfound.NemosAmbience"
 		],
 		"client": [
-			"com.nemonotfound.AmbienceModClient"
+			"com.nemonotfound.NemosAmbienceClient"
 		]
 	},
 	"mixins": [
 		"nemos-ambience.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.22",
+		"fabricloader": ">=0.15.10",
 		"minecraft": "~1.20.2",
 		"java": ">=17",
 		"fabric-api": "*"
