@@ -24,6 +24,6 @@ public class ModParticles {
     }
 
     private static SimpleParticleType registerParticle(String path, SimpleParticleType particleType) {
-        return Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, path), particleType);
+        return Registry.register(Registries.PARTICLE_TYPE, Identifier.of(MOD_ID, path), particleType);
     }
 }

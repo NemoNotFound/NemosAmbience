@@ -2,7 +2,7 @@ package com.nemonotfound.nemosambience.mixin;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.client.util.ParticleUtil;
+import net.minecraft.particle.ParticleUtil;
 import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.tag.BlockTags;
