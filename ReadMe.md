@@ -16,7 +16,7 @@
 
 <p align="center">
   I love to create mods for Minecraft and wish to live off it one day, so I hope you like what I do. <br>
-  Either way feel free to give me your feedback and suggestions, either in the comments or on my <a href="https://discord.com/invite/yxs9dga">Discord</a> :) 
+  Either way feel free to give me your feedback and suggestions, either on my Discord or <a href="https://github.com/NemoNotFound/NemosAmbience/discussions/">here</a> :)
   <br>
   For more information check the <a href="https://www.nemonotfound.com/minecraft-mods/nemos-ambience/wiki">wiki</a>.
 </p>
