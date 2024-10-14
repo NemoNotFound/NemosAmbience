@@ -1,16 +1,16 @@
 {
   "textures": [
-    "nemos-ambience:jungle_0",
-    "nemos-ambience:jungle_1",
-    "nemos-ambience:jungle_2",
-    "nemos-ambience:jungle_3",
-    "nemos-ambience:jungle_4",
-    "nemos-ambience:jungle_5",
-    "nemos-ambience:jungle_6",
-    "nemos-ambience:jungle_7",
-    "nemos-ambience:jungle_8",
-    "nemos-ambience:jungle_9",
-    "nemos-ambience:jungle_10",
-    "nemos-ambience:jungle_11"
+    "nemos-ambience:leaf_0",
+    "nemos-ambience:leaf_1",
+    "nemos-ambience:leaf_2",
+    "nemos-ambience:leaf_3",
+    "nemos-ambience:leaf_4",
+    "nemos-ambience:leaf_5",
+    "nemos-ambience:leaf_6",
+    "nemos-ambience:leaf_7",
+    "nemos-ambience:leaf_8",
+    "nemos-ambience:leaf_9",
+    "nemos-ambience:leaf_10",
+    "nemos-ambience:leaf_11"
   ]
 }
