@@ -1,4 +1,4 @@
-# Changelog v1.1.0
+# Changelog v1.2
 
-## Additions
-- Added mod icon
+## Changes
+- Particles now change color by biome
