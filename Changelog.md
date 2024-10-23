@@ -1,4 +1,4 @@
-# Changelog v1.2
+# Changelog v1.3
 
-## Changes
-- Particles now change color by biome
+## Additions
+- Added falling leaf particles for pale oak leaves

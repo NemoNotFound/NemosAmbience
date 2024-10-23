@@ -35,14 +35,10 @@ public class LeavesBlockMixin {
 	@Unique
 	private void generateLeafParticles(World world, BlockPos pos, Random random, String leavesName) {
 		switch (leavesName) {
-			case "oak_leaves" -> generateParticles(world, pos, random, OAK_LEAVES_Particle);
-			case "dark_oak_leaves" -> generateParticles(world, pos, random, DARK_OAK_LEAVES_Particle);
-			case "birch_leaves" -> generateParticles(world, pos, random, BIRCH_LEAVES_Particle);
-			case "spruce_leaves" -> generateParticles(world, pos, random, SPRUCE_LEAVES_Particle);
-			case "jungle_leaves" -> generateParticles(world, pos, random, JUNGLE_LEAVES_Particle);
-			case "mangrove_leaves" -> generateParticles(world, pos, random, MANGROVE_LEAVES_Particle);
-			case "acacia_leaves" -> generateParticles(world, pos, random, ACACIA_LEAVES_Particle);
-		}
+			case "oak_leaves", "dark_oak_leaves", "birch_leaves", "spruce_leaves", "jungle_leaves", "mangrove_leaves",
+                 "acacia_leaves" -> generateParticles(world, pos, random, FALLING_LEAVES_PARTICLE);
+			case "pale_oak_leaves" -> generateParticles(world, pos, random, PALE_OAK_FALLING_LEAVES_PARTICLE);
+        }
 	}
 
 	@Unique
@@ -50,9 +46,11 @@ public class LeavesBlockMixin {
 		if (random.nextInt(20) == 0) {
 			BlockPos blockPos = pos.down();
 			BlockState blockState = world.getBlockState(blockPos);
+
 			if (LeavesBlock.isFaceFullSquare(blockState.getCollisionShape(world, blockPos), Direction.UP)) {
 				return;
 			}
+
 			ParticleUtil.spawnParticle(world, pos, random, particleType);
 		}
 	}

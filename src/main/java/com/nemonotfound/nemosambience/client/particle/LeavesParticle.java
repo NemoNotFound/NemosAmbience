@@ -37,31 +37,32 @@ extends SpriteBillboardParticle {
     }
 
     private void setParticleColor(ClientWorld world) {
-        int color = getFoliageColor(world);
-
-        float red = ((color >> 16) & 0xFF) / 255.0f;
-        float green = ((color >> 8) & 0xFF) / 255.0f;
-        float blue = (color & 0xFF) / 255.0f;
-
-        this.setColor(red, green, blue);
-    }
-
-    private int getFoliageColor(ClientWorld world) {
-        if (world == null) {
-            return FoliageColors.getDefaultColor();
-        }
-
         BlockPos pos = BlockPos.ofFloored(x, y, z);
         Block leavesBlock = world.getBlockState(pos.up()).getBlock();
         String leavesName = Registries.BLOCK.getId(leavesBlock).getPath();
 
-        if (leavesName.equals("birch_leaves")) {
-            return FoliageColors.getBirchColor();
-        } else if (leavesName.equals("spruce_leaves")) {
-            return FoliageColors.getSpruceColor();
+        if (!leavesName.equals("pale_oak_leaves")) {
+            int color = getFoliageColor(world, pos, leavesName);
+
+            float red = ((color >> 16) & 0xFF) / 255.0f;
+            float green = ((color >> 8) & 0xFF) / 255.0f;
+            float blue = (color & 0xFF) / 255.0f;
+
+            this.setColor(red, green, blue);
+        }
+    }
+
+    private int getFoliageColor(ClientWorld world, BlockPos pos, String leavesName) {
+        if (world == null) {
+            return FoliageColors.getDefaultColor();
         }
 
-        return BiomeColors.getFoliageColor(world, pos);
+        return switch (leavesName) {
+            case "birch_leaves" -> FoliageColors.getBirchColor();
+            case "spruce_leaves" -> FoliageColors.getSpruceColor();
+            default -> BiomeColors.getFoliageColor(world, pos);
+        };
+
     }
 
     @Override
