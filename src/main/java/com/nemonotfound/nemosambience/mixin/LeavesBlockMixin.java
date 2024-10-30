@@ -37,7 +37,6 @@ public class LeavesBlockMixin {
 		switch (leavesName) {
 			case "oak_leaves", "dark_oak_leaves", "birch_leaves", "spruce_leaves", "jungle_leaves", "mangrove_leaves",
                  "acacia_leaves" -> generateParticles(world, pos, random, FALLING_LEAVES_PARTICLE);
-			case "pale_oak_leaves" -> generateParticles(world, pos, random, PALE_OAK_FALLING_LEAVES_PARTICLE);
         }
 	}
 

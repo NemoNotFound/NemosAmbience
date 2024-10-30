@@ -12,9 +12,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.biome.FoliageColors;
 
-@Environment(value=EnvType.CLIENT)
+@Environment(value = EnvType.CLIENT)
 public class LeavesParticle
-extends SpriteBillboardParticle {
+        extends SpriteBillboardParticle {
 
     private float rotSpeed;
     private final float particleRandom;
@@ -24,9 +24,9 @@ extends SpriteBillboardParticle {
         super(world, x, y, z);
         float f;
         this.setSprite(spriteProvider.getSprite(this.random.nextInt(12), 12));
-        this.rotSpeed = (float)Math.toRadians(this.random.nextBoolean() ? -30.0 : 30.0);
+        this.rotSpeed = (float) Math.toRadians(this.random.nextBoolean() ? -30.0 : 30.0);
         this.particleRandom = this.random.nextFloat();
-        this.spinAcceleration = (float)Math.toRadians(this.random.nextBoolean() ? -5.0 : 5.0);
+        this.spinAcceleration = (float) Math.toRadians(this.random.nextBoolean() ? -5.0 : 5.0);
         this.maxAge = 300;
         this.gravityStrength = 7.5E-4f;
         this.scale = f = this.random.nextBoolean() ? 0.05f : 0.075f;
@@ -41,15 +41,13 @@ extends SpriteBillboardParticle {
         Block leavesBlock = world.getBlockState(pos.up()).getBlock();
         String leavesName = Registries.BLOCK.getId(leavesBlock).getPath();
 
-        if (!leavesName.equals("pale_oak_leaves")) {
-            int color = getFoliageColor(world, pos, leavesName);
+        int color = getFoliageColor(world, pos, leavesName);
+        float red = ((color >> 16) & 0xFF) / 255.0f;
+        float green = ((color >> 8) & 0xFF) / 255.0f;
+        float blue = (color & 0xFF) / 255.0f;
 
-            float red = ((color >> 16) & 0xFF) / 255.0f;
-            float green = ((color >> 8) & 0xFF) / 255.0f;
-            float blue = (color & 0xFF) / 255.0f;
+        this.setColor(red, green, blue);
 
-            this.setColor(red, green, blue);
-        }
     }
 
     private int getFoliageColor(ClientWorld world, BlockPos pos, String leavesName) {
@@ -85,8 +83,8 @@ extends SpriteBillboardParticle {
         float g = Math.min(f / 300.0f, 1.0f);
         double d = Math.cos(Math.toRadians(this.particleRandom * 60.0f)) * 2.0 * Math.pow(g, 1.25);
         double e = Math.sin(Math.toRadians(this.particleRandom * 60.0f)) * 2.0 * Math.pow(g, 1.25);
-        this.velocityX += d * (double)0.0025f;
-        this.velocityZ += e * (double)0.0025f;
+        this.velocityX += d * (double) 0.0025f;
+        this.velocityZ += e * (double) 0.0025f;
         this.velocityY -= this.gravityStrength;
         this.rotSpeed += this.spinAcceleration / 20.0f;
         this.prevAngle = this.angle;

@@ -12,10 +12,9 @@ import static com.nemonotfound.nemosambience.NemosAmbience.log;
 public class ModParticles {
 
     public static final SimpleParticleType FALLING_LEAVES_PARTICLE = registerParticle("falling_leaves", FabricParticleTypes.simple());
-    public static final SimpleParticleType PALE_OAK_FALLING_LEAVES_PARTICLE = registerParticle("pale_oak_falling_leaves", FabricParticleTypes.simple());
 
     public static void registerParticles() {
-        log.info("Register Nemo's particles");
+        log.info("Registering particles");
     }
 
     private static SimpleParticleType registerParticle(String path, SimpleParticleType particleType) {

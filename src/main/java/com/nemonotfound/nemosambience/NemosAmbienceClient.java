@@ -13,7 +13,6 @@ public class NemosAmbienceClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         registerParticle(FALLING_LEAVES_PARTICLE);
-        registerParticle(PALE_OAK_FALLING_LEAVES_PARTICLE);
     }
 
     private void registerParticle(SimpleParticleType particleType) {
