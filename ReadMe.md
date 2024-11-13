@@ -18,6 +18,13 @@ For more information check the [wiki](https://www.nemonotfound.com/minecraft-mod
 <br>
 <br>
 
+# Adding Falling Leaves Particles to Your Leaves (1.21.2+)
+If you want to add the particles to your leaves block, just add your block in the block tag "drops_falling_leaves".
+This must be under data/nemos-ambience/tags/block.
+
+**Note:** This works best with grey textures, since the color will be set within the particle.
+I'll adapt this in the future to make it work better with other textures.
+
 # Downloads
 - [CurseForge](https://curseforge.com/minecraft/mc-mods/nemos-ambience)
 - [Modrinth](https://modrinth.com/mod/nemos-ambience)
