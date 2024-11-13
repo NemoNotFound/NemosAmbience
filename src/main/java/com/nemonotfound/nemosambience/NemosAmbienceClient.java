@@ -1,6 +1,6 @@
 package com.nemonotfound.nemosambience;
 
-import com.nemonotfound.nemosambience.client.particle.LeavesParticle;
+import com.nemonotfound.nemosambience.client.particle.FallingLeavesParticle;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.particle.v1.FabricSpriteProvider;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
@@ -19,6 +19,6 @@ public class NemosAmbienceClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance()
                 .register(particleType, (FabricSpriteProvider spriteProvider) ->
                         (parameters, world, x, y, z, velocityX, velocityY, velocityZ) ->
-                                new LeavesParticle(world, x, y, z, spriteProvider));
+                                new FallingLeavesParticle(world, x, y, z, spriteProvider));
     }
 }

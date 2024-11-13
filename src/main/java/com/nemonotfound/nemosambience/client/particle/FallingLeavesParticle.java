@@ -13,14 +13,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.biome.FoliageColors;
 
 @Environment(value = EnvType.CLIENT)
-public class LeavesParticle
+public class FallingLeavesParticle
         extends SpriteBillboardParticle {
 
     private float rotSpeed;
     private final float particleRandom;
     private final float spinAcceleration;
 
-    public LeavesParticle(ClientWorld world, double x, double y, double z, SpriteProvider spriteProvider) {
+    public FallingLeavesParticle(ClientWorld world, double x, double y, double z, SpriteProvider spriteProvider) {
         super(world, x, y, z);
         float f;
         this.setSprite(spriteProvider.getSprite(this.random.nextInt(12), 12));
@@ -47,7 +47,6 @@ public class LeavesParticle
         float blue = (color & 0xFF) / 255.0f;
 
         this.setColor(red, green, blue);
-
     }
 
     private int getFoliageColor(ClientWorld world, BlockPos pos, String leavesName) {
@@ -90,7 +89,7 @@ public class LeavesParticle
         this.prevAngle = this.angle;
         this.angle += this.rotSpeed / 20.0f;
         this.move(this.velocityX, this.velocityY, this.velocityZ);
-        if (this.onGround || this.maxAge < 299 && (this.velocityX == 0.0 || this.velocityZ == 0.0)) {
+        if (this.maxAge < 299 && (this.velocityX == 0.0 || this.velocityZ == 0.0)) {
             this.markDead();
         }
         if (this.dead) {
@@ -99,6 +98,13 @@ public class LeavesParticle
         this.velocityX *= this.velocityMultiplier;
         this.velocityY *= this.velocityMultiplier;
         this.velocityZ *= this.velocityMultiplier;
+
+        if (this.onGround) {
+            this.velocityX = 0;
+            this.velocityY = 0;
+            this.velocityZ = 0;
+            this.rotSpeed = 0;
+        }
     }
 }
 
