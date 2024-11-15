@@ -11,13 +11,8 @@ import static com.nemonotfound.nemosambience.NemosAmbience.log;
 
 public class ModParticles {
 
-    public static final DefaultParticleType OAK_LEAVES_Particle = registerParticle("oak_leaves", FabricParticleTypes.simple());
-    public static final DefaultParticleType DARK_OAK_LEAVES_Particle = registerParticle("dark_oak_leaves", FabricParticleTypes.simple());
-    public static final DefaultParticleType BIRCH_LEAVES_Particle = registerParticle("birch_leaves", FabricParticleTypes.simple());
-    public static final DefaultParticleType SPRUCE_LEAVES_Particle = registerParticle("spruce_leaves", FabricParticleTypes.simple());
-    public static final DefaultParticleType JUNGLE_LEAVES_Particle = registerParticle("jungle_leaves", FabricParticleTypes.simple());
-    public static final DefaultParticleType MANGROVE_LEAVES_Particle = registerParticle("mangrove_leaves", FabricParticleTypes.simple());
-    public static final DefaultParticleType ACACIA_LEAVES_Particle = registerParticle("acacia_leaves", FabricParticleTypes.simple());
+    public static final DefaultParticleType FALLING_LEAVES_PARTICLE = registerParticle("falling_leaves", FabricParticleTypes.simple());
+    public static final DefaultParticleType PALE_OAK_FALLING_LEAVES_PARTICLE = registerParticle("pale_oak_falling_leaves", FabricParticleTypes.simple());
 
     public static void registerParticles() {
         log.info("Register Nemo's particles");
