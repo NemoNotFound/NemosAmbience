@@ -51,12 +51,12 @@ public class FallingLeavesParticle
 
     private int getFoliageColor(ClientWorld world, BlockPos pos, String leavesName) {
         if (world == null) {
-            return FoliageColors.getDefaultColor();
+            return FoliageColors.DEFAULT;
         }
 
         return switch (leavesName) {
-            case "birch_leaves" -> FoliageColors.getBirchColor();
-            case "spruce_leaves" -> FoliageColors.getSpruceColor();
+            case "birch_leaves" -> FoliageColors.BIRCH;
+            case "spruce_leaves" -> FoliageColors.SPRUCE;
             default -> BiomeColors.getFoliageColor(world, pos);
         };
 
