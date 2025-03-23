@@ -1,7 +1,5 @@
-package com.nemonotfound.nemosambience;
+package com.nemonotfound.nemos.ambience;
 
-import com.nemonotfound.nemosambience.client.particle.ModParticles;
-import com.nemonotfound.nemosambience.tag.ModBlockTags;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +12,5 @@ public class NemosAmbience implements ModInitializer {
     @Override
     public void onInitialize() {
         log.info("Thanks for using Nemo's Ambience!");
-        ModParticles.registerParticles();
-        ModBlockTags.register();
     }
 }

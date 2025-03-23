@@ -17,19 +17,19 @@
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"com.nemonotfound.nemosambience.NemosAmbience"
+			"com.nemonotfound.nemos.ambience.NemosAmbience"
 		],
 		"client": [
-			"com.nemonotfound.nemosambience.NemosAmbienceClient"
+			"com.nemonotfound.nemos.ambience.NemosAmbienceClient"
 		]
 	},
 	"mixins": [
 		"nemos-ambience.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
+		"fabricloader": ">=0.16.10",
 		"minecraft": [
-			"~1.21.4"
+			">=1.21.5"
 		],
 		"java": ">=21",
 		"fabric-api": "*"

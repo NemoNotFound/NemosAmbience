@@ -1,11 +1,8 @@
 {
 	"required": true,
-	"package": "com.nemonotfound.nemosambience.mixin",
+	"package": "com.nemonotfound.nemos.ambience.mixin",
 	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"LeavesBlockMixin",
-		"AbstractBlockMixin"
-	],
+	"mixins": [],
 	"injectors": {
 		"defaultRequire": 1
 	}
